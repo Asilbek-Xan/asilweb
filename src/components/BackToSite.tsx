@@ -1,0 +1,2 @@
+import { ArrowLeft } from "lucide-react";import { useNavigate } from "react-router-dom";
+export default function BackToSite(){const navigate=useNavigate();return <button type="button" onClick={()=>navigate("/")} className="inline-flex items-center gap-2 rounded-lg border border-white/8 bg-white/5 px-3 py-2 text-xs text-slate-300 hover:bg-white/10"><ArrowLeft size={14}/> Back to Portfolio</button>}

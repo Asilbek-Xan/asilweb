@@ -1,0 +1,11 @@
+import { useState } from "react";
+import { Trash2, Plus } from "lucide-react";
+import { storage } from "../services/storage";
+import { toast } from "react-toastify";
+export default function Experience() {
+ const [items,setItems]=useState(storage.getExperience()), [role,setRole]=useState(""), [company,setCompany]=useState(""), [period,setPeriod]=useState("2026 — Present"), [desc,setDesc]=useState("");
+ const add=()=>{if(!role||!company)return;const n=[...items,{id:crypto.randomUUID(),role,company,period,description:desc,type:"work" as const}];storage.saveExperience(n);setItems(n);toast.success("Experience deleted");toast.success("Experience deleted");setRole("");setCompany("");setDesc("");toast.success("Experience added")};
+ const del=(id:string)=>{const n=items.filter(x=>x.id!==id);storage.saveExperience(n);setItems(n);toast.success("Experience deleted");toast.success("Experience deleted")};
+ return <div><h1 className="text-2xl font-black">Experience</h1><div className="mt-6 grid gap-3 rounded-xl border border-white/7 bg-[#16142a] p-5 md:grid-cols-2"><input value={role} onChange={e=>setRole(e.target.value)} placeholder="Role" className="rounded-lg bg-[#111025] p-3 text-xs"/><input value={company} onChange={e=>setCompany(e.target.value)} placeholder="Company / School" className="rounded-lg bg-[#111025] p-3 text-xs"/><input value={period} onChange={e=>setPeriod(e.target.value)} placeholder="Period" className="rounded-lg bg-[#111025] p-3 text-xs"/><input value={desc} onChange={e=>setDesc(e.target.value)} placeholder="Description" className="rounded-lg bg-[#111025] p-3 text-xs"/><button onClick={add} className="rounded-lg bg-violet-600 py-3 text-xs font-bold md:col-span-2"><Plus size={14} className="mr-1 inline"/>Add Experience</button></div>
+ <div className="mt-5 space-y-3">{items.map(x=><div key={x.id} className="rounded-xl border border-white/7 bg-[#16142a] p-5"><div className="flex justify-between"><div><p className="text-xs font-bold">{x.role}</p><p className="mt-1 text-[10px] text-violet-300">{x.company} · {x.period}</p></div><button onClick={()=>del(x.id)} className="text-red-400"><Trash2 size={15}/></button></div><p className="mt-3 text-xs leading-5 text-slate-500">{x.description}</p></div>)}</div></div>;
+}

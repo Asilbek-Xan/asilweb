@@ -7,6 +7,9 @@ body { margin: 0; min-width: 320px; background: #0d0b1c; color: white; font-fami
 button, input, textarea, select { font: inherit; }
 ::selection { background: rgba(139,92,246,.35); }
 
+* {
+  cursor: none !important;
+}
 
 html.light body { background: #f6f7fb; color: #111827; }
 html.light .bg-\[\#0d0b1c\] { background-color: #f6f7fb !important; }

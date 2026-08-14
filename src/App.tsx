@@ -1,2 +1,13 @@
 import AppRoutes from "./routes/AppRoutes";
-export default function App(){return <AppRoutes/>;}
+import Cursor from "./cursor/cursor";
+
+function App() {
+  return (
+    <>
+      <Cursor />
+      <AppRoutes />
+    </>
+  );
+}
+
+export default App;

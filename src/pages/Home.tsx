@@ -48,7 +48,7 @@ export default function Home() {
             <motion.div initial={{ opacity: 0, scale: .8 }} animate={{ opacity: 1, scale: 1 }} className="flex justify-center">
               <div className="relative h-64 w-64 rounded-full border border-violet-400/30 bg-gradient-to-br from-violet-500/30 to-cyan-500/10 p-2 shadow-[0_0_80px_rgba(139,92,246,.25)] sm:h-80 sm:w-80">
                 <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-[#17142d]">
-                  <span className="text-7xl font-black text-violet-400/30"><img src="" alt="" /></span>
+                  <span className="text-7xl font-black text-violet-400/30"><img src="/images/profile/profile_image.png" alt="Asilbek Xan" /></span>
                 </div>
                 <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 rounded-full border border-violet-400/20 bg-[#16142a] px-4 py-2 text-[10px] text-violet-200">Available for work</span>
               </div>

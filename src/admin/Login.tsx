@@ -6,8 +6,8 @@ import BackToSite from "../components/BackToSite";
 import ThemeToggle from "../components/ThemeToggle";
 import { storage } from "../services/storage";
 
-const ADMIN_USERNAME = "Asilbek";
-const ADMIN_PASSWORD = "12345";
+const ADMIN_USERNAME = "admin6";
+const ADMIN_PASSWORD = "admin6";
 
 export default function Login() {
   const [username, setUsername] = useState(ADMIN_USERNAME);
@@ -48,7 +48,6 @@ export default function Login() {
           </label>
           {error && <p className="mt-3 text-xs text-red-400">{error}</p>}
           <button className="mt-4 w-full rounded-lg bg-violet-600 py-3 text-xs font-bold hover:bg-violet-500">Sign In</button>
-          <p className="mt-4 text-center text-[10px] text-slate-500">Username: Asilbek · Password: 12345</p>
         </form>
       </div>
     </div>

@@ -125,7 +125,7 @@ export default function Home() {
                 <p className="text-sm font-semibold">Let's work together</p>
                 <p className="mt-3 text-xs leading-6 text-slate-400">I'm interested in frontend projects, learning opportunities and collaborations.</p>
                 <div className="mt-7 space-y-4 text-xs text-slate-400">
-                  <p><Mail size={15} className="mr-3 inline text-violet-400"/> hello@example.com</p>
+                  <p><Mail size={15} className="mr-3 inline text-violet-400"/><a rel="stylesheet" href="mailto:asilbekshakarboev@gmail.com" />asilbekshakarboev@gmail.com</p>
                   <p><MapPin size={15} className="mr-3 inline text-violet-400"/> Uzbekistan</p>
                 </div>
               </div>
